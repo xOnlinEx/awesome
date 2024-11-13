@@ -1,0 +1,127 @@
+add_newline = false
+
+# Powerline symbols                                     
+format = """
+[╭─](8)$directory$git_branch$git_status
+[╰─](8)$character
+"""
+[fill]
+symbol = " "
+disabled = false
+
+[character]
+success_symbol = "[](green)"
+error_symbol = "[](red)"
+
+[os]
+format = "[](fg:white)[$symbol]($style)[](fg:white bg:blue)"
+style = "bg:white fg:black"
+disabled = false
+
+[os.symbols]
+Windows = " "
+Arch = " "
+# Disable the package module, hiding it from the prompt completely
+[package]
+disabled = true
+
+[git_branch]
+symbol = " "
+format = "[  ](green)[$branch](green)"
+
+[git_commit]
+commit_hash_length = 4
+tag_symbol = " "
+
+[git_state]
+format = '[\($state( $progress_current of $progress_total)\)]($style) '
+cherry_pick = "[🍒 PICKING](bold red)"
+
+[git_status]
+conflicted = "x"
+ahead = " 🏎💨 "
+behind = " 😰 "
+diverged = " 😵 "
+untracked = " 🤷 ‍"
+stashed = " 📦 "
+modified = "+"
+staged = '[++\($count\)](green)'
+renamed = " ✍️ "
+deleted = "-"
+
+[hostname]
+ssh_only = false
+format =  "[@$hostname](bg:color4 fg:color3)"
+trim_at = ".companyname.com"
+disabled = false
+
+[line_break]
+disabled = false
+
+[memory_usage]
+disabled = true
+threshold = -1
+symbol = " "
+style = "bold dimmed green"
+
+[time]
+disabled = true
+format = '🕙[\[ $time \]]($style) '
+time_format = "%T"
+
+[username]
+style_user = "bg:color4 fg:color3"
+style_root = "red bold"
+format = "[$user]($style)"
+disabled = false
+show_always = true
+
+#[directory]
+#home_symbol = "  "
+#read_only = "  "
+#style = "bg:green fg:black"
+#truncation_length = 6
+#truncation_symbol = "••/"
+#format = '[](bold fg:green)[$path ]($style)[](bold fg:green)'
+[directory]
+format = "[  ](fg:blue)[$path](fg:blue)"
+style = "bg:none fg:green"
+truncation_length = 6
+truncate_to_repo = false
+truncation_symbol = "••/"
+
+
+#[directory.substitutions]
+#"Desktop" = "  "
+#"Documents" = "  "
+#"Downloads" = "  "
+#"Music" = " 󰎈 "
+#"Pictures" = "  "
+#"Videos" = "  "
+
+[cmd_duration]
+min_time = 0
+format = '[ $duration](bold bg:8 fg:white)[](fg:8)'
+
+[palettes.kanagawa_dragon]
+color1 = "#181616"
+color2 = "#c5c9c5"
+color3 = "#8a9a7b"
+color4 = "#403a3a"
+
+#0 = Black
+#1 = Red
+#2 = Green
+#3 = Yellow
+#4 = Blue
+#5 = Magenta
+#6 = Cyan
+#7 = Light Gray
+#8 = Dark Gray (a veces considerado como un gris plomo)
+#9 = Light Red
+#10 = Light Green
+#11 = Light Yellow
+#12 = Light Blue
+#13 = Light Magenta
+#14 = Light Cyan
+#15 = White
